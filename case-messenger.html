@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Веб-мессенджер</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="logo">
+            <a href="index.html"><span>Моё</span>Портфолио</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="cases.html">Кейсы</a></li>
+                <li><a href="about.html">Обо мне</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <div class="page-header">
+            <h1>Веб-мессенджер</h1>
+            <div class="line"></div>
+        </div>
+
+        <div class="card" style="margin-bottom: 40px; border: none; padding: 0;">
+            <div class="card-image" style="height: 400px;">
+                <img src="images/messenger-screenshot.png" alt="Скриншот мессенджера">
+            </div>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+            <h2 style="font-weight: 200; margin-bottom: 20px;">Задача</h2>
+            <p>Создать защищённую платформу для общения с поддержкой личных и групповых чатов, файлообменом и системой администрирования. Проект должен быть полностью рабочим и развёрнутым на сервере.</p>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+            <h2 style="font-weight: 200; margin-bottom: 20px;">Функциональность</h2>
+            <ul style="margin-left: 20px;">
+                <li>Личные сообщения и групповые каналы (включая канал «Общие новости» с правами только для администратора).</li>
+                <li>Загрузка файлов с валидацией по MIME-типам, переименованием в UUID и ограничением размера.</li>
+                <li>Бесконечный скролл с пагинацией.</li>
+                <li>Браузерные уведомления о новых сообщениях.</li>
+                <li>Административная панель: управление пользователями, сброс паролей, назначение прав.</li>
+                <li>Регистрация и аутентификация с хешированием bcrypt, CSRF-защита форм.</li>
+            </ul>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+            <h2 style="font-weight: 200; margin-bottom: 20px;">Технические детали</h2>
+            <ul style="margin-left: 20px;">
+                <li>Бэкенд: Python 3.11, Flask, Flask-SocketIO (WebSockets для реального времени).</li>
+                <li>База данных: SQLite (разработка), для продакшена можно заменить на PostgreSQL.</li>
+                <li>Фронтенд: ванильный JavaScript, адаптивная вёрстка (CSS без фреймворков).</li>
+                <li>Безопасность: bcrypt, CSRF-токены на всех формах.</li>
+                <li>Деплой на VPS (Ubuntu): Gunicorn + Nginx, SSL (Let's Encrypt), systemd-сервис, UFW.</li>
+            </ul>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+            <h2 style="font-weight: 200; margin-bottom: 20px;">Результат</h2>
+            <p>Рабочее приложение, развёрнутое на сервере. Кодовая база ~4000 строк. Проект демонстрирует навыки fullstack-разработки, работы с вебсокетами, безопасностью и администрированием сервера.</p>
+        </div>
+
+        <div class="card-tags" style="justify-content: center;">
+            <span class="tag">Flask</span>
+            <span class="tag">WebSockets</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">Nginx</span>
+            <span class="tag">SSL</span>
+            <span class="tag">bcrypt</span>
+            <span class="tag">systemd</span>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="cases.html" class="btn">← Назад к кейсам</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026. Все права защищены.</p>
+    </div>
+</footer>
+</body>
+</html>
