@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Bot — бот для сбора анкет</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="logo">
+            <a href="index.html"><span>Моё</span>Портфолио</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="cases.html">Кейсы</a></li>
+                <li><a href="about.html">Обо мне</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="container">
+        <div class="page-header">
+            <h1>Form Bot — бот для сбора анкет</h1>
+            <div class="line"></div>
+        </div>
+
+        <div class="card" style="margin-bottom: 40px; border: none; padding: 0;">
+            <div class="card-image" style="height: 400px;">
+                <img src="images/formbot-screenshot1.png" alt="Скриншот Form Bot">
+            </div>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+            <h2 style="font-weight: 200; margin-bottom: 20px;">Задача</h2>
+            <p>Создать безопасный и удобный инструмент для сбора анкет (опросов), который полностью соответствует требованиям 152-ФЗ о персональных данных. Пользователи должны давать явное согласие, иметь возможность удалить свои данные, а администраторы — легко управлять анкетами и публиковать их.</p>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+            <h2 style="font-weight: 200; margin-bottom: 20px;">Функционал</h2>
+            <ul style="margin-left: 20px;">
+                <li>Анкетирование: имя, возраст, состояние здоровья, часовой пояс.</li>
+                <li>Строгое соблюдение 152-ФЗ: запрос согласия при старте, кнопка «Я согласен» со ссылкой на политику, команда <code>/delete_my_data</code> для полного удаления всех данных.</li>
+                <li>Админ-панель: просмотр анкет, управление администраторами, настройка приветствия и сообщения после анкеты.</li>
+                <li>Публикация постов: можно создать пост с фото/видео и кнопкой «📝 Заполнить анкету» в любом из добавленных каналов.</li>
+                <li>Управление каналами: добавление каналов (по ID или через пересланное сообщение), удаление.</li>
+                <li>Уведомления администраторам о новых анкетах.</li>
+            </ul>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+            <h2 style="font-weight: 200; margin-bottom: 20px;">Технические детали</h2>
+            <ul style="margin-left: 20px;">
+                <li>Python 3.11, aiogram 3.x (асинхронный фреймворк).</li>
+                <li>SQLAlchemy 2.0 (async) + PostgreSQL (продакшен), asyncpg.</li>
+                <li>Redis для FSM и хранения состояний.</li>
+                <li>Интеграция с Telegram Bot API для публикации постов и медиа.</li>
+                <li>Логика безопасной отправки длинных сообщений (разбивка на части).</li>
+                <li>Деплой в Docker (Dockerfile + docker-compose).</li>
+            </ul>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+            <h2 style="font-weight: 200; margin-bottom: 20px;">Результат</h2>
+            <p>Готовый к внедрению бот. Исключены риски штрафов за нарушение 152-ФЗ, автоматизирован сбор анкет. Мои клиенты экономят часы ручной работы.</p>
+            <p><a href="https://disk.yandex.ru/i/HcmfnWKfdTFy_A" class="btn btn-outline" style="margin-right: 20px;">Смотреть презентацию</a></p>
+        </div>
+
+        <div class="card-tags" style="justify-content: center;">
+            <span class="tag">Python</span>
+            <span class="tag">aiogram</span>
+            <span class="tag">SQLAlchemy</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Redis</span>
+            <span class="tag">Docker</span>
+            <span class="tag">152-ФЗ</span>
+            <span class="tag">GDPR</span>
+        </div>
+
+        <div style="text-align: center; margin-top: 60px;">
+            <a href="cases.html" class="btn">← Назад к кейсам</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026. Все права защищены.</p>
+    </div>
+</footer>
+</body>
+</html>
